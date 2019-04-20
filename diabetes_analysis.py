@@ -18,8 +18,8 @@ print(data.groupby('Outcome').size())
 #Of 768, 500 labeled as 0 and 268 labled as 1
 
 #-Plot "Outcome"-
-# sns.countplot(data['Outcome'], label="Count")
-# plt.show()
+sns.countplot(data['Outcome'], label="Count")
+
 
 #-Test connection between model complexity and accuracy-
 X_train, X_test, y_train, y_test = train_test_split(data.loc[:, data.columns != 'Outcome'], data['Outcome'], stratify=data['Outcome'], random_state=66)
